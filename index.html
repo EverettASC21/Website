@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everett Johnson</title>
+    <link type="text/css" href ="style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="leftcolumn">
+            <br><br><br><br>
+            <ul>
+                <li class="navlink active" data-info="about_me">About Me</li>
+                <li class="navlink" data-info="teaching">Goals</li>
+               
+            </ul>
+        </div> 
+        <div id="rightcolumn">
+            <div id="header">
+               Everett Matthew Johnson's Website
+            </div>
+            <div id="about_me" class="content">
+              
+                <div id="me"><img id="me_image" src="me.jpg" width="250px"></a></div>
+                <br>
+
+                <div>
+                    <p class="title">Education</p>
+                    <hr>
+                    <div> From Kindergarden to 8th grade I attended Robert Treat Academy. It is charter school in Newark. I am currently
+                        attending Seton Hall Prepatory in West Orange.
+                </div>
+                <br>
+                <div>
+                    <p class="title">Favorite Things</p>
+                    <hr>
+                    <ul>
+                        <li>Video Games</li>
+                        <li>Anime</li>
+                        <li>Animals</li>
+                        <li>Food</li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <p class="title">Contact Info</p>
+                    <hr>
+                    <div>
+                        Email: everettj493@gmail.com<br>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div id="Life Goals"  class="content hidden">
+                  
+                    <ul>
+                       
+                    </ul>
+                    <br>
+                    <p class="title2">Ultimate Career Goal:</p>
+                    <ul>
+                        <li>Computer Science Professor</li>
+                    </ul>
+
+                </div>
+
+                <div id="gallery" class="content hidden">
+                    <div id="gallery1">
+                        <div class="photos"><img class="photosimg" src="images/a.png" width="205px" data-info="<i>@Washington Square Park</i>"></div>
+                        <div class="photos"><img class="photosimg" src="images/b.png" width="205px" data-info="<i>#iGraduated!</i>"></div>
+                        <div class="photos"><img class="photosimg" src="images/c.png" width="205px" data-info="Me and my FAVORITE professor - <i>Prof. Craig Kapp</i>"></div>
+                    </div>
+
+                    <div id="gallery2">
+                        <div class="photos"><img class="photosimg" src="images/d.png" width="330px" data-info="Performing '<i>All I See Is You</i>' at the <i>9/11 Memorial Service</i>"></div>
+                        <div class="photos"><img class="photosimg" src="images/e.png" width="295px" data-info="New York University Singers | Spring Concert 2019"></div>
+                    </div>
+
+                    <div id="gallery3">
+                        Hover over the images for more info
+                    </div>
+                </div>
+        	</div>
+        </div>
+
+            
+    <script>
+
+var navlinkArray = document.getElementsByClassName("navlink");
+            var contentArray = document.getElementsByClassName("content");
+            var photoArray = document.getElementsByClassName("photosimg");
+            var captionDiv = document.getElementById("gallery3");
+            captionDiv.style["font-style"] = "italic";
+
+
+            for (var i = 0; i < navlinkArray.length; i++) {
+            	navlinkArray[i].addEventListener('click', function(event) {
+
+                    
+                    for (var j = 0; j < navlinkArray.length; j++) {
+                        navlinkArray[j].classList.remove("active");
+                        contentArray[j].classList.add("hidden");
+                    }
+
+                    
+                    event.currentTarget.classList.add("active");
+                    document.getElementById(event.currentTarget.dataset.info).classList.remove("hidden");
+                });
+
+
+
+            }
+
+
+
+       
+
+    </script>
+    
+    </body>
+</html>
+
+
+/
